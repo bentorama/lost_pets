@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple Rails app for tracking Lost Pets
 
-Things you may want to cover:
+Built with Ruby 3.1.2 and Rails 7
 
-* Ruby version
+## Installation Instruction
 
-* System dependencies
+#### Change directory to your home directory
+```cd ~/code/<YOUR_USERNAME>``` <-- don't forget to change <YOUR_USERNAME>!
 
-* Configuration
+#### Clone the GitHub repo from my GitHub to your laptop
+```git clone git@github.com:bentorama/lost_pets.git```
 
-* Database creation
+#### Move into the lost_pets project
+```cd lost_pets```
 
-* Database initialization
+#### Install the gems we added (simple_form and faker)
+```bundle install```
 
-* How to run the test suite
+#### Run the migrations
+```rails db:migrate```
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Seed some lost pets
+```rails db:seed```
 
-* Deployment instructions
+#### Install simple_form
+```rails generate simple_form:install --bootstrap```
 
-* ...
+#### Fire up the server
+```rails server```
