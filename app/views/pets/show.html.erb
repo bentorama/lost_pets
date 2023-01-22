@@ -1,5 +1,13 @@
-<h3><%= @pet.name %> <small><%= @pet.species %></small></h3>
-<ul>
-  <li>Found at: <%= @pet.address %></li>
-  <li>Found on: <%= @pet.found_on %></li>
-</ul>
+<div class="container mt-5">
+  <h3><%= @pet.name %> <small><%= @pet.species %></small></h3>
+  <ul>
+    <li>Found at: <%= @pet.address %></li>
+    <li>Found on: <%= @pet.found_on %></li>
+  </ul>
+  <%= link_to "Delete #{@pet.name}", pet_path(@pet), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <br>
+  <%= link_to "Update #{@pet.name}", edit_pet_path(@pet) %>
+  <br>
+  <%= link_to 'Back to all the pets', pets_path %>
+</div>
+
